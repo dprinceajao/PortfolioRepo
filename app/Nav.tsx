@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Link from "next/link";
 import Blog from "./Blog";
 import Project from "./Project";
+import { Button } from "@nextui-org/react";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,13 +96,21 @@ const Nav = () => {
                   <li className="max-w-max lg:mt-4">
                     <a
                       href="#"
-                      className={`block md:px-3 mr-8 ${
+                      className={`block md:px-3 mr-6 ${
                         currentPage === "Blog" ? "active" : ""
                       }`}
                       onClick={() => navigateTo("Blog")}
                     >
                       Blog
                     </a>
+                  </li>
+                  <li className="max-w-max lg:mt-2">
+                    <Link
+                      href="#"
+                      className="inline-block whitespace-nowrap rounded-lg bg-indigo-500 px-4 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
+                    >
+                      Resume
+                    </Link>
                   </li>
                 </ul>
               </div>
